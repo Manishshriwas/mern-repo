@@ -1,0 +1,103 @@
+/* Login.css */
+
+/* Section styling */
+.section-login {
+  padding: 3rem 1rem;
+}
+
+/* Grid layout */
+.section-login .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+  max-width: 1000px;
+  margin: auto;
+  background: #fff;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Image styling */
+.section-login .registration-image img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+/* Form styling */
+.section-login .registration-form {
+  padding: 1rem 2rem;
+}
+
+.section-login .registration-form h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* Input fields */
+.section-login .registration-form label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+  color: #444;
+}
+
+.section-login .registration-form input {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  margin-bottom: 1.2rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.section-login .registration-form input:focus {
+  border-color: #6c63ff;
+  box-shadow: 0 0 5px rgba(108, 99, 255, 0.5);
+}
+
+/* Submit button */
+.section-login .btn-submit {
+  display: block;
+  width: 100%;
+  padding: 0.9rem;
+  background: #6c63ff;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.section-login .btn-submit:hover {
+  background: #574bdb;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(108, 99, 255, 0.4);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .section-login .container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .section-login .registration-image {
+    display: none; /* Hide image on small screens */
+  }
+
+  .section-login .registration-form {
+    padding: 1rem;
+  }
+}
