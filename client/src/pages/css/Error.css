@@ -1,0 +1,49 @@
+.simple-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f9fafb;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    }
+    
+    
+    .simple-title {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #111827;
+    margin: 0;
+    }
+    
+    
+    .simple-message {
+    margin-top: 0.5rem;
+    font-size: 1.25rem;
+    color: #4b5563;
+    }
+    
+    
+    .button-group {
+    margin-top: 1.5rem;
+    display: flex;
+    gap: 1rem;
+    }
+    
+    
+    .simple-link, .simple-button {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    background-color: #111827;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    transition: background 0.2s ease;
+    }
+    
+    
+    .simple-link:hover, .simple-button:hover {
+    background-color: #374151;
+    }
