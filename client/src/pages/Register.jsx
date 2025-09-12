@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './css/Register.css'
 import registerImage from "../assets/Sign.jpg"; // make sure path is correct
 import { useNavigate } from 'react-router-dom';
-
+import { useAuth } from '../store/auth.jsx';
 
 
 
@@ -13,8 +13,10 @@ const Register = () => {
     phone: "",
     password: "",
   });
- 
- const navigate=useNavigate();
+
+
+const navigate=useNavigate();
+  const {storetokenInLs}=useAuth();
 
   const handleInput = (e) => {
     console.log(e);
@@ -40,12 +42,22 @@ const Register = () => {
         body: JSON.stringify(user)
       });
       if (response.ok) {
+        const res_data=await response.json();
+        console.log("res from server",res_data )
+
+        // localStorage.setItem("token",res_data.token)
+        storetokenInLs(res_data.token);
+
         setUser({
           username: "",
           email: "",
           phone: "",
           password: "",
       }),
+
+
+
+
       navigate('/login');
       }
       console.log(response);
